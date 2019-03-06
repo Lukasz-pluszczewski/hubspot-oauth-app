@@ -10,3 +10,4 @@ apps/
 /papu
 
 .env
+oauthFileCache.json

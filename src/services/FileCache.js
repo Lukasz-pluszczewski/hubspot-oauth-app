@@ -30,8 +30,12 @@ const FileCache = async (initialData = {}) => {
     })
   };
 
-  const currentData = await loadFile();
-  await saveFile({...initialData, ...currentData});
+  if (fs.existsSync(filePath)) {
+    const currentData = await loadFile();
+    await saveFile({ ...initialData, ...currentData });
+  } else {
+    await saveFile(initialData);
+  }
 
   const fileCacheInstance = {
     listeners: new Set,
