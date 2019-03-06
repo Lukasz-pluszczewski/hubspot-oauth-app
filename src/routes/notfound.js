@@ -1,6 +1,3 @@
-import { ObjectID } from 'mongodb';
-import { find, findLast, insert, remove, update } from 'services/mongoDatabaseService';
-
 const healthRoutes = [
   {
     path: '*',
