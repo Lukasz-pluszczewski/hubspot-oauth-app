@@ -9,6 +9,7 @@ const config = {
   CLIENT_ID: process.env.CLIENT_ID,
   CLIENT_SECRET: process.env.CLIENT_SECRET,
   SCOPES: ['contacts'].join(' '),
+  REDIRECT_URI: `http://localhost:${process.env.PORT || 8080}/oauth-callback`,
 };
 
 export default config;

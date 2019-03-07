@@ -3,10 +3,7 @@ import log from 'all-log';
 import request from 'request-promise-native';
 import config from '../config';
 
-const { APP_ID, HAPI_KEY, USER_ID, CLIENT_ID, CLIENT_SECRET, port } = config;
-
-const SCOPES = ['contacts'].join(' ');
-const REDIRECT_URI = `http://localhost:${port}/oauth-callback`;
+const { REDIRECT_URI, SCOPES, APP_ID, HAPI_KEY, USER_ID, CLIENT_ID, CLIENT_SECRET, port } = config;
 
 const authUrl =
   'https://app.hubspot.com/oauth/authorize' +
